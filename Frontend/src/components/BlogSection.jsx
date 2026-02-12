@@ -5,9 +5,14 @@ import { Calendar, ArrowRight, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '../utils/createPageURL'
 import { formatBlogDate } from '../utils/formatDate';
+import Loader from './Loader';
 
-export default function BlogSection( {blogs}) {
-  
+export default function BlogSection( {blogs, loading}) {
+
+  if (loading) {
+      return <Loader />;
+    }
+
   return (
     <section
       id="blogs"

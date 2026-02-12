@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Download, Phone, ArrowDown } from "lucide-react";
 import Resume from "../assets/Sarthak-Software-Developer.pdf";
-import ProfilePhoto from '../assets/IMG_20251222_205735.jpg' 
+import ProfilePhoto from '../assets/Profile.png';
 
 export default function HeroSection() {
   const scrollToSection = (href) => {

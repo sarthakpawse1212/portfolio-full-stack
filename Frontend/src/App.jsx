@@ -13,8 +13,10 @@ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 function App() {
 
   const [blogs, setBlogs] = useState([]); // store blogs from backend
+  const [loading, setLoading] = useState(true);
   const fetchData = async () => {
     try {
+      setLoading(true);
 
       //change base url according to backend server from .env file
       const res = await fetch(
@@ -26,6 +28,8 @@ function App() {
 
     } catch (error) {
       throw new Error("Error fetching blogs:", error);
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -41,7 +45,7 @@ function App() {
         <SkillsSection />
         <ExperienceSection />
         <ProjectsSection />
-        <BlogSection blogs={blogs}/>
+        <BlogSection blogs={blogs} loading={loading}/>
         <ContactSection />
       </main>
     </div>
