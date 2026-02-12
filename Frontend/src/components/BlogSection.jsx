@@ -1,17 +1,12 @@
 /* eslint-disable react/prop-types */
 import { motion } from 'framer-motion';
-import { Calendar, ArrowRight, BookOpen } from 'lucide-react';
+import { Calendar, ArrowRight, BookOpen, Loader2 } from 'lucide-react';
 // import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '../utils/createPageURL'
 import { formatBlogDate } from '../utils/formatDate';
-import Loader from './Loader';
 
 export default function BlogSection( {blogs, loading}) {
-
-  if (loading) {
-      return <Loader />;
-    }
 
   return (
     <section
@@ -39,7 +34,14 @@ export default function BlogSection( {blogs, loading}) {
         </motion.div>
 
         {/* Blog Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+
+        {loading ? (
+          <div className="flex justify-center text-amber-50 ">
+              <Loader2 className="mr-2 animate-spin text-white" />
+              <p className=''>Loading...</p>
+          </div>
+        ) : (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {blogs.map((blog, index) => (
             <motion.div
               key={blog._id}
@@ -96,6 +98,9 @@ export default function BlogSection( {blogs, loading}) {
             </motion.div>
           ))}
         </div>
+        )
+        }
+        
 
         {/* View All Button */}
         <motion.div
