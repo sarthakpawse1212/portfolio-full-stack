@@ -2,19 +2,10 @@ import { motion } from 'framer-motion';
 import { ExternalLink, Github, Folder } from 'lucide-react';
 import { useState } from 'react';
 //import { Button } from '@/components/ui/button';
-import portfolioImage from '../assets/portfolio.png'
+import newBlogBanner from '../assets/BlogSectionPortfolio.png'
+import walletBanner from '../assets/WalletBanner.png'
 
 const projects = [
-  {
-    title: 'Full Stack E-Commerce Application (From Scratch)',
-    description: 'Built without frameworks to understand how the web really works, developed from scratch using core web technologies to deeply understand frontend–backend interaction.',
-    image: 'https://images.unsplash.com/photo-1586880244406-556ebe35f282?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZSUyMGNvbW1lcmNlfGVufDB8fDB8fHww',
-    tags: ['HTML', 'CSS', 'JavaScript', 'MongoDB', 'NodeJS'],
-    github: 'https://github.com/sarthakpawse1212/FullStackScratch',
-    live: 'https://superb-dieffenbachia-3250db.netlify.app/',
-    featured: true,
-    stats: { stars: 128, forks: 34 },
-  },
   {
     title: 'Microservices-Based E-Commerce Backend System',
     description: 'Designed for scale, not just functionality, production-style e-commerce backend using a microservices architecture.',
@@ -27,13 +18,23 @@ const projects = [
   },
   {
     title: 'Full-Stack Portfolio Website with Blog Platform',
-    description: 'More than a portfolio, A personal publishing platform, built to understand modern development along with content management, routing, and dynamic rendering.',
-    image: portfolioImage,
+    description: 'More than a portfolio, a personal publishing platform built to explore modern development with content management, routing, and dynamic rendering.',
+    image: newBlogBanner,
     tags: ['ReactJS', 'NodeJs', 'MongoDb', 'Tailwind', 'REST APIs'],
-    github: 'https://github.com/sarthakpawse1212/Mini-Projects',
-    live: 'https://github.com/sarthakpawse1212/Mini-Projects',
+    github: 'https://github.com/sarthakpawse1212/portfolio-full-stack',
+    live: 'https://portfolio-website-sp.netlify.app/',
     featured: true,
     stats: { stars: 256, forks: 67 },
+  },
+  {
+    title: 'Wallet Service - Currency Management Backend',
+    description: 'Implemented a ledger-based transaction architecture supporting multiple asset types (Gold Coins, Diamonds, Loyalty Points), along with Dockerized infrastructure, database migrations, health monitoring endpoints, and API testing via Postman.',
+    image: walletBanner,
+    tags: ['NodeJS', 'PostgreSQL', 'Redis', 'Docker', 'REST API', 'Backend Architecture'],
+    github: 'https://github.com/sarthakpawse1212/currency-management-backend-',
+    live: 'https://github.com/sarthakpawse1212/currency-management-backend-',
+    featured: true,
+    stats: { stars: 0, forks: 0 },
   }
 ];
 
@@ -153,17 +154,6 @@ export default function ProjectsSection() {
                   )}
                 </div>
 
-                {/* Stats */}
-                {/* <div className="flex items-center gap-4 text-xs text-gray-500">
-                  <div className="flex items-center gap-1">
-                    <Star className="w-3.5 h-3.5" />
-                    {project.stats.stars}
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <GitFork className="w-3.5 h-3.5" />
-                    {project.stats.forks}
-                  </div>
-                </div> */}
               </div>
             </motion.div>
           ))}
@@ -176,13 +166,6 @@ export default function ProjectsSection() {
           viewport={{ once: true }}
           className="text-center mt-12 sm:mt-16"
         >
-          {/* <Button
-            variant="outline"
-            className="px-6 sm:px-8 py-5 sm:py-6 rounded-full bg-transparent border-2 border-purple-500 hover:bg-purple-500 text-purple-400 hover:text-white transition-all duration-300"
-          >
-            <Github className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
-            View All on GitHub
-          </Button> */}
         </motion.div>
 
         {/* View More */}
@@ -196,7 +179,7 @@ export default function ProjectsSection() {
           
             className="px-4 sm:px-6 py-3 sm:py-4 bg-transparent border-2 border-purple-500 hover:bg-purple-500 text-purple-400 hover:text-white rounded-lg text-base sm:text-lg font-medium transition-all duration-300"
           >
-            <a href="https://github.com/sarthakpawse1212"> View All on GitHub</a>
+            <a href="https://github.com/sarthakpawse1212?tab=repositories"> View All on GitHub</a>
            
           </button>
         </motion.div>

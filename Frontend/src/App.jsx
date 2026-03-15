@@ -7,6 +7,7 @@ import HeroSection from './components/HeroSection'
 import Navbar from './components/Navbar'
 import ProjectsSection from './components/ProjectSection'
 import SkillsSection from './components/SkillsSection'
+import ServicesSection from './components/Services'
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
@@ -42,9 +43,10 @@ function App() {
       <Navbar />
       <main>
         <HeroSection />
-        <SkillsSection />
-        <ExperienceSection />
+        <ServicesSection/>
         <ProjectsSection />
+        <ExperienceSection />
+        <SkillsSection />
         <BlogSection blogs={blogs} loading={loading}/>
         <ContactSection />
       </main>

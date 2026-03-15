@@ -147,7 +147,7 @@ export default function SkillsSection() {
             Technical Expertise
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
-            Skills & Technologies
+            Tools & Technologies
           </h2>
           <p className="max-w-2xl mx-auto text-gray-400 text-base sm:text-lg px-4">
             Technologies and tools I use to build modern applications
@@ -216,10 +216,10 @@ export default function SkillsSection() {
           className="mt-16 sm:mt-20 lg:mt-24 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
         >
           {[
-            { number: <Server />, label: 'Crafted Web Syetems', gradient: 'from-blue-500 to-cyan-500' },
+            { number: <Server />, label: 'Crafting Applications', gradient: 'from-blue-500 to-cyan-500' },
             { number: <Layers />, label: 'Performance Optimization', gradient: 'from-purple-500 to-pink-500' },
             { number: <ShoppingCart />, label: 'Ecommerce Design / Product', gradient: 'from-orange-500 to-red-500' },
-            { number: <ToolCase />, label: 'Maintainance and Support', gradient: 'from-green-500 to-emerald-500' },
+            { number: <ToolCase />, label: 'Development and Maintainance', gradient: 'from-green-500 to-emerald-500' },
           ].map((stat, index) => ( 
             <motion.div
               key={stat.label}

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Download, Phone, ArrowDown } from "lucide-react";
 import Resume from "../assets/Sarthak-Software-Developer.pdf";
-import ProfilePhoto from '../assets/Profile.png';
+import ProfilePhoto from '../assets/NewProfilePhoto.png';
 
 export default function HeroSection() {
   const scrollToSection = (href) => {
@@ -16,11 +16,6 @@ export default function HeroSection() {
       id="hero"
       className="relative min-h-screen flex items-center justify-center bg-[#0a0a0f]"
     >
-      {/* Gradient Orbs */}
-      {/* <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 -left-20 w-96 h-96 bg-purple-600/20 rounded-full blur-[100px]" />
-        <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-blue-600/20 rounded-full blur-[100px]" />
-      </div> */}
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-32">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
@@ -37,7 +32,7 @@ export default function HeroSection() {
                 <img
                   src={ProfilePhoto}
                   alt="sarthak-photo"
-                  className="w-90 h-90 sm:w-120 sm:h-120 object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                  className="w-75 h-75 sm:w-100 sm:h-100 object-cover grayscale hover:grayscale-0 transition-all duration-500"
                 />
               </div>
             </div>
@@ -50,9 +45,9 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="order-1 lg:order-2 text-center lg:text-left"
           >
-            <span className="inline-block px-4 py-2 mb-6 text-sm font-medium bg-purple-500/20 text-purple-300 border border-purple-500/30 rounded-full">
+            {/* <span className="inline-block px-4 py-2 mb-6 text-sm font-medium bg-purple-500/20 text-purple-300 border border-purple-500/30 rounded-full">
               Available for new opportunities
-            </span>
+            </span> */}
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6">
               <span className="text-white">Hi, I&apos;m </span>
@@ -62,11 +57,12 @@ export default function HeroSection() {
             </h1>
 
             <p className="text-xl sm:text-2xl lg:text-3xl text-gray-400 mb-4 sm:mb-6 font-light">
-              Software Engineer crafting scalable systems that don’t break at scale.
+              Software engineer building digital products
             </p>
 
             <p className="text-base sm:text-lg text-gray-400 mb-8 sm:mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0">
-              I believe great software is invisible — it just works.
+              Building systems and modern web applications.
+              Helping startups and businesses launch reliable solutions & software.
             </p>
 
             {/* CTA Buttons */}
@@ -77,6 +73,12 @@ export default function HeroSection() {
               >
                 My Work
                 <ArrowDown className="ml-2 w-4 h-4 sm:w-5 sm:h-5 justify-between" />
+              </button>
+              <button
+                onClick={() => scrollToSection('#services')}
+                className="px-3 sm:px-4 py-3 sm:py-3 bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/30 text-white rounded-lg text-base sm:text-lg font-medium transition-all duration-300 shadow-lg"
+              >
+                Services
               </button>
               <button
                 onClick={() => scrollToSection("#contact")}

@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import { motion } from 'framer-motion';
 import { Calendar, ArrowRight, BookOpen, Loader2 } from 'lucide-react';
-// import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '../utils/createPageURL'
 import { formatBlogDate } from '../utils/formatDate';

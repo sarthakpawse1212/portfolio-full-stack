@@ -6,11 +6,12 @@ import { Link } from 'react-router-dom';
 
 const navLinks = [
   { name: 'Home', href: '#hero' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Experience', href: '#experience' },
+  { name: 'Services', href: '#services' },
   { name: 'Projects', href: '#projects' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Experience', href: '#experience' },
+  { name: 'Skills', href: '#skills' },
   { name: 'Blogs', href: '#blogs' },
+  { name: 'Contact', href: '#contact' },
 ];
 
 export default function Navbar() {
@@ -59,7 +60,7 @@ export default function Navbar() {
               whileTap={{ scale: 0.95 }}
             >
               <Logo className="w-8 h-8 sm:w-10 sm:h-10" />
-              <span className="text-lg sm:text-xl font-bold text-white">SP</span>
+              <span className="text-lg sm:text-xl font-bold text-white">JBx</span>
             </motion.a>
 
             {/* Desktop Navigation */}

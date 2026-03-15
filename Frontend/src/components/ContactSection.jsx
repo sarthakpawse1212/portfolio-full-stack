@@ -29,7 +29,7 @@ const contactLinks = [
   {
     icon: Phone,
     label: 'Phone',
-    value: '+91-7972005578',
+    value: '+91 7972005578',
     href: 'tel:7972005578',
     color: 'hover:bg-emerald-500',
   },
@@ -54,7 +54,7 @@ export default function ContactSection() {
             Let&apos;s Work Together
           </h2>
           <p className="max-w-2xl mx-auto text-gray-400 text-base sm:text-lg px-4">
-            Have a project in mind? Lets discuss new opportunities and creative ideas
+            Have a project in mind? Let&apos;s discuss new opportunities and creative ideas
           </p>
         </motion.div>
 
@@ -111,9 +111,8 @@ export default function ContactSection() {
                   Ready to bring your ideas to life?
                 </h3>
                 <p className="text-sm sm:text-base text-gray-400 mb-8 leading-relaxed">
-                  Download my resume to learn more about my experience, or give me a call 
-                  to discuss your next project. Im currently available for freelance work 
-                  and full-time opportunities.
+                 Get in touch to discuss your next project. 
+                 I’m currently available for freelance work and business development opportunities.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
@@ -151,7 +150,7 @@ export default function ContactSection() {
         >
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2 text-gray-500 text-sm">
-              <span>© 2025 Sarthak. Built with</span>
+              <span>© 2026 Sarthak. Built with</span>
               <Heart className="w-4 h-4 text-purple-500 fill-purple-500" />
               <span>and React</span>
             </div>

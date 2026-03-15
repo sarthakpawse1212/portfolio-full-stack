@@ -7,7 +7,7 @@ const experiences = [
     company: 'Tech Mahindra',
     location: 'Pune, Maharashtra',
     period: '2023 Nov - 2026 Feb',
-    description: 'Results-driven Software Engineer with 2+ years of experience at Tech Mahindra, working on scalable full-stack systems using Node.js, TypeScript, and React-based frontends. Strong backend expertise with hands-on exposure to frontend integration, UI performance considerations, and API-driven development, Contributed to a large-scale telecom transformation project serving 45M+ customers, ensuring high availability and stability.',
+    description: 'Results-driven Software Engineer with 2+ years of experience at Tech Mahindra, working on scalable full-stack systems using Node.js, TypeScript, and React-based frontends. Strong backend expertise with hands-on exposure to frontend integration, UI performance considerations, and API-driven development. Contributed to a large-scale telecom transformation project (Telefonica Germany) serving over 45 million customers, ensuring high availability and stability.',
     achievements: [
       'Achieved a 30% reduction in production incidents through proactive optimization.',
       'A strong collaborator and mentor, contributing to improved team performance while managing high-availability applications in a microservices architecture.',
@@ -15,6 +15,18 @@ const experiences = [
     ],
     tech: ['Node.js', 'TypeScript', 'MongoDb', 'React', 'Docker', 'Kubernetes', 'AWS', 'Kafka', 'Redis', 'Agile', 'Jira'],
     current: false,
+  },
+  {
+    title: 'Full Stack Developer',
+    company: 'Turbosoft',
+    location: 'Pune, Maharashtra',
+    period: '2026',
+    description: 'Working on scalable full-stack systems using Node.js, Strapi, TypeScript, and React-based frontends. Strong backend expertise with hands-on exposure to frontend integration, UI performance considerations, and API-driven development.',
+    achievements: [
+      'A strong collaborator contributing to performance improvements while building and managing high-availability applications.'
+    ],
+    tech: ['Node.js', 'TypeScript', 'MongoDb', 'React', 'Strapi', 'Postgres'],
+    current: true,
   }
 ];
 

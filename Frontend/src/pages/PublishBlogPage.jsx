@@ -65,16 +65,6 @@ export default function PublishBlog() {
 
       let payload = postData;
 
-      // let finalBody = {
-      //     id: null,
-      //     banner: payload.banner,
-      //     title: payload.heading,
-      //     content: payload.content,
-      //     date: new Date().toISOString(),
-      //     category: null,
-      //     excerpt: ''
-      //   };
-
       const response = await fetch(
         `${API_BASE_URL}/api/post`,
         //'http://localhost:3000/api/post', 
