@@ -37,7 +37,7 @@ const contactLinks = [
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="relative py-16 sm:py-24 lg:py-32 bg-[#0f0f14]">
+    <section id="contact" className="relative py-16 sm:py-10 lg:py-32 bg-[#0f0f14]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div

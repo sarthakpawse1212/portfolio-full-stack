@@ -3,6 +3,7 @@ import fullStackBanner from '../assets/FullStackBanner.png';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Code, Globe, Database, Zap, ArrowRight } from 'lucide-react';
+import { useRef } from "react";
 
 const servicesData = [
   {
@@ -11,8 +12,8 @@ const servicesData = [
     title: 'Full Stack Development',
     tagline: 'From idea to production-ready app',
     description: 'End-to-end web application development with modern technologies like React, Node.js, and cloud infrastructure. I handle the full pipeline so you can focus on your business.',
-    features: ['Custom Web Applications', 'RESTful API Development', 'Database Design & Optimization', 'Cloud Deployment'],
-    image: fullStackBanner,
+    features: ['Custom Web Applications', 'RESTful API Development', 'Database Design & Optimization', ],
+    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNvZGV8ZW58MHx8MHx8fDA%3D',
     accent: 'rgba(139,92,246,0.15)',
     bar: 'bg-violet-400/60',
     number: '01'
@@ -56,8 +57,32 @@ const servicesData = [
 ];
 
 export default function ServicesSection() {
+  const tabsContainerRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [autoPlay, setAutoPlay] = useState(true);
+
+ useEffect(() => {
+  if (tabsContainerRef.current) {
+    const container = tabsContainerRef.current;
+    const activeTab = container.children[activeIndex];
+
+    const isSmallScreen = window.innerWidth < 1024;
+
+    if (activeTab && isSmallScreen) {
+      const tabLeft = activeTab.offsetLeft;
+      const tabWidth = activeTab.offsetWidth;
+      const containerWidth = container.offsetWidth;
+      const maxScroll = container.scrollWidth - containerWidth;
+
+      const targetScroll = tabLeft - containerWidth / 2 + tabWidth / 2;
+
+      container.scrollTo({
+        left: Math.max(0, Math.min(targetScroll, maxScroll)), // ← clamp between 0 and max
+        behavior: "smooth",
+      });
+    }
+  }
+}, [activeIndex]);
 
   useEffect(() => {
     if (!autoPlay) return;
@@ -102,7 +127,7 @@ export default function ServicesSection() {
         <div className="flex flex-col  gap-3 lg:gap-5" style={{ minHeight: 560 }}>
 
           {/* Left Sidebar — refined list */}
-          <div className="flex gap-1 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0 lg:w-64 xl:w-72 flex-shrink-0 scrollbar-hide">
+          <div ref={tabsContainerRef} className="flex gap-1 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0 lg:w-64 xl:w-72 flex-shrink-0 scrollbar-hide">
             {servicesData.map((service, idx) => {
               const SIcon = service.icon;
               const isActive = idx === activeIndex;
@@ -110,7 +135,7 @@ export default function ServicesSection() {
                 <button
                   key={service.id}
                   onClick={() => { setActiveIndex(idx); setAutoPlay(false); }}
-                  className={`relative flex-shrink-0 group w-full text-left transition-all duration-300 rounded-lg overflow-hidden`}
+                  className={`relative flex-shrink-0 group text-left transition-all duration-300 rounded-lg overflow-hidden min-w-[140px] lg:w-full`}
                 >
                   <div className={`flex items-center gap-3 px-4 py-3.5 transition-all duration-300 ${
                     isActive ? 'bg-[#1a1a24]' : 'hover:bg-[#1a1a24]/60'
@@ -189,14 +214,6 @@ export default function ServicesSection() {
 
                 {/* Content — bottom-left aligned */}
                 <div className="relative h-full flex flex-col justify-between p-7 sm:p-10">
-
-                  {/* Top: service counter */}
-                  <div className="flex items-center gap-3">
-                    <span className="text-[10px] font-mono tracking-widest text-white/25 uppercase">
-                      {active.number} — {String(servicesData.length).padStart(2, '0')}
-                    </span>
-                    <div className="h-px w-12 bg-white/10" />
-                  </div>
 
                   {/* Bottom: main content */}
                   <div>

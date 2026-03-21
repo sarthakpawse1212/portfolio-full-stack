@@ -129,9 +129,6 @@ export default function HeroSection() {
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
-  // Skill chips for instant credibility scan
-  const skills = ["React", "Node.js", "TypeScript", "PostgreSQL", "Docker", "REST APIs"];
-
   return (
     <section
       id="hero"
@@ -158,7 +155,7 @@ export default function HeroSection() {
       {/* NEW: Floating particles ─── */}
       <Particles />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-32">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-32 sm: mt-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 
           {/* ══════════════════════════════
@@ -215,14 +212,14 @@ export default function HeroSection() {
                 </motion.div>
 
                 {/* experience pill anchored top-left */}
-                <motion.div
+                {/* <motion.div
                   initial={{ opacity: 0, scale: 0.7 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 1.2, duration: 0.5 }}
                   className="absolute -top-4 -left-4 px-3 py-2 rounded-xl bg-[#111118] border border-blue-500/30 shadow-xl shadow-blue-900/20"
                 >
                   <span className="text-xs font-medium text-gray-300">3+ yrs experience</span>
-                </motion.div>
+                </motion.div> */}
               </motion.div>
             </div>
           </motion.div>
@@ -287,7 +284,7 @@ export default function HeroSection() {
               transition={{ delay: 1.1 }}
               className="text-base sm:text-lg text-gray-500 mb-7 leading-relaxed max-w-lg mx-auto lg:mx-0"
             >
-              I build fast, reliable products — from architecture to deployment.
+              I build fast, reliable products from architecture to deployment.
               Helping buisnesses ship with confidence.
             </motion.p>
 
@@ -312,7 +309,7 @@ export default function HeroSection() {
               {/* SECONDARY — animated border */}
               <BorderButton
                 onClick={() => scrollToSection("#projects")}
-                className="text-base font-medium"
+                className="text-base font-medium lg:ml-4"
               >
                 <span className="flex items-center justify-center gap-2 px-6 py-3.5 text-gray-300 hover:text-white transition-colors duration-300">
                   View My Work
@@ -321,12 +318,12 @@ export default function HeroSection() {
               </BorderButton>
 
               {/* TERTIARY — ghost */}
-              <button
+              {/* <button
                 onClick={() => scrollToSection("#services")}
                 className="px-6 py-3.5 text-gray-500 hover:text-purple-400 text-base font-medium transition-colors duration-300 underline-offset-4 hover:underline"
               >
                 Services
-              </button>
+              </button> */}
             </motion.div>
 
             {/* ─── Social Links ─── */}

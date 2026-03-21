@@ -4,3 +4,35 @@ html, body {
   width: 100%;
   overflow-x: hidden;
 }
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* ===== Chrome, Edge, Safari ===== */
+  ::-webkit-scrollbar {
+    width: 4px;          /* thinner scrollbar */
+    height: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent; /* remove scrollbox background */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.18); /* very light */
+    border-radius: 999px;
+    transition: background-color 0.3s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.35); /* subtle hover */
+  }
+
+  /* ===== Firefox ===== */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.18) transparent;
+  }
+}
