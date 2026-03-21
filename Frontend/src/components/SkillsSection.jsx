@@ -17,7 +17,6 @@ import LogoKafka from "../assets/Kafka.svg"
 import LogoPostman from "../assets/Postman.svg"
 import LogoElasticSearch from "../assets/Elastic.svg"
 import LogoJira from "../assets/Jira.svg"
-import { Layers, Server, ShoppingCart, ToolCase } from 'lucide-react';
 
 // Technologies with brand colors
 const technologies = [
@@ -206,44 +205,6 @@ export default function SkillsSection() {
             </motion.div>
           ))}
         </div>
-
-        {/* Stats Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-16 sm:mt-20 lg:mt-24 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
-        >
-          {[
-            { number: <Server />, label: 'Crafting Applications', gradient: 'from-blue-500 to-cyan-500' },
-            { number: <Layers />, label: 'Performance Optimization', gradient: 'from-purple-500 to-pink-500' },
-            { number: <ShoppingCart />, label: 'Ecommerce Design / Product', gradient: 'from-orange-500 to-red-500' },
-            { number: <ToolCase />, label: 'Development and Maintainance', gradient: 'from-green-500 to-emerald-500' },
-          ].map((stat, index) => ( 
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ scale: 1.05, y: -5 }}
-              className="group text-center p-6 sm:p-8 rounded-2xl bg-[#1a1a24] border-2 border-gray-800 hover:border-transparent shadow-sm hover:shadow-xl hover:shadow-purple-500/20 transition-all duration-300 cursor-pointer relative overflow-hidden"
-            >
-              {/* Gradient Background on Hover */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
-              
-              <div className="relative z-10">
-                <div className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 text-white group-hover:text-white transition-colors duration-300">
-                  {stat.number}
-                </div>
-                <div className="text-xs sm:text-sm font-medium text-gray-400 group-hover:text-white/90 transition-colors duration-300">
-                  {stat.label}
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
       </div>
     </section>
   );

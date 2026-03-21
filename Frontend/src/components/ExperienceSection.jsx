@@ -23,7 +23,8 @@ const experiences = [
     period: '2026',
     description: 'Working on scalable full-stack systems using Node.js, Strapi, TypeScript, and React-based frontends. Strong backend expertise with hands-on exposure to frontend integration, UI performance considerations, and API-driven development.',
     achievements: [
-      'A strong collaborator contributing to performance improvements while building and managing high-availability applications.'
+      'A strong collaborator contributing to performance improvements while building and managing high-availability applications.',
+      'Taking end-to-end ownership of features from requirement understanding and system design to implementation, testing, and production deployment.'
     ],
     tech: ['Node.js', 'TypeScript', 'MongoDb', 'React', 'Strapi', 'Postgres'],
     current: true,

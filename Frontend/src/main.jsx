@@ -9,8 +9,11 @@ import SingleBlog from './pages/SingleBlogPage.jsx'
 import { AppProvider } from './context/AppContext.jsx'
 import Register from './utils/register.jsx'
 import Login from './utils/login.jsx'
+import { HelmetProvider } from 'react-helmet-async';
 
 createRoot(document.getElementById('root')).render(
+
+  <HelmetProvider>
 
     <BrowserRouter>
       {/* <App /> */}
@@ -26,4 +29,6 @@ createRoot(document.getElementById('root')).render(
         </Routes>
       </AppProvider>
     </BrowserRouter>
+
+  </HelmetProvider>
 )

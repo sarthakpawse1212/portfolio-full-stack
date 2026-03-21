@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { createPageUrl } from '../utils/createPageURL'
 import { AppContext } from '../context/AppContext';
 import { formatBlogDate } from '../utils/formatDate';
+import SEO from '../components/SEO';
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
@@ -167,6 +168,13 @@ export default function SingleBlog() {
           </Link>
         </div>
       </div>
+
+      <SEO 
+        title={blog.title} 
+        description={blog.excerpt} 
+        type="article"
+        image={blog.banner}
+      />
 
       {/* Hero Section with Banner */}
       <div className="relative">
