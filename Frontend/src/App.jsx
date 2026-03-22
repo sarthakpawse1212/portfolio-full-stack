@@ -44,7 +44,7 @@ function App() {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Sarthak Pawse",
-    "url": "https://portfolio-website-sp.netlify.app",
+    "url": "https://www.beginixx.com",
     "jobTitle": "Full Stack Developer",
     "description": "I build fast, reliable products from architecture to deployment using React, Node.js, and Docker.",
     "sameAs": [

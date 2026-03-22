@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import Logo from './Logo';
+// import beginixx from '../assets/beginixx.png'; 
 import { Link } from 'react-router-dom';
 
 const navLinks = [
@@ -60,7 +61,8 @@ export default function Navbar() {
               whileTap={{ scale: 0.95 }}
             >
               <Logo className="w-8 h-8 sm:w-10 sm:h-10" />
-              <span className="text-lg sm:text-xl font-bold text-white">JBx</span>
+              <span className="text-lg sm:text-xl font-bold text-white">Beginixx</span>
+              {/* <img className="w-40 h-25 sm:w-60 sm:h-30" src={beginixx} alt="logo" /> */}
             </motion.a>
 
             {/* Desktop Navigation */}

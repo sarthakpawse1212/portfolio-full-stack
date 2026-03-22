@@ -22,7 +22,7 @@ const projects = [
     image: newBlogBanner,
     tags: ['ReactJS', 'NodeJs', 'MongoDb', 'Tailwind', 'REST APIs'],
     github: 'https://github.com/sarthakpawse1212/portfolio-full-stack',
-    live: 'https://portfolio-website-sp.netlify.app/',
+    live: 'https://www.beginixx.com/',
     featured: true,
     stats: { stars: 256, forks: 67 },
   },
